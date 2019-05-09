@@ -40,8 +40,6 @@ function functionalSingles(elements) {
 }
 console.log(functionalSingles(states));
 
-/////////////////////////////////////////////////////////////////////
-
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // sum: Imperative solution
@@ -53,3 +51,9 @@ function imperativeSum(elements) {
   return total;
 }
 console.log(imperativeSum(numbers));
+
+// sum: Functional solution
+function functionalSum(elements) {
+  return elements.reduce((total, n) => { return total += n; });
+}
+console.log(functionalSum(numbers));
