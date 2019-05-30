@@ -57,3 +57,32 @@ function functionalSum(elements) {
   return elements.reduce((total, n) => { return total += n; });
 }
 console.log(functionalSum(numbers));
+
+// lengths: Imperative solution
+function imperativeLengths(elements) {
+  let lengths = {};
+  elements.forEach(function(element) {
+    lengths[element] = element.length;
+  });
+  return lengths;
+}
+console.log(imperativeLengths(states));
+
+// lengths: Functional solution
+ return elements.reduce((Lengths, element)=> {
+   lengths[element] = element.length;
+   return lengths;
+ }, {});
+}
+console.log(functionalLengths(states));
+
+// Reverses a string
+function reverse(string) {
+  return Array.from(string).reverse().join("");
+}
+
+// Returns true for a palindrome, false otherwise.
+function palindrome(string) {
+  let processedContent = string.toLowerCase();
+  return processedContent === reverse(processedContent);
+}
